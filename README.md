@@ -1,80 +1,95 @@
-# Machine Learning Analysis of Heavy Crude Oil Rheological Properties: A Case Study of the Eastern Dahomey Basin, Nigeria
+### Heavy Oil Rheological Properties Analysis using Ensemble Machine Learning
 
 ## Overview
-This repository contains a machine learning-based analysis of heavy crude oil rheological properties from Nigeria's Eastern Dahomey Basin. The study focuses on understanding and predicting various viscosity parameters using an ensemble learning approach, with particular emphasis on the effects of temperature and shear conditions on flow properties.
+This repository contains a machine learning analysis of heavy crude oil rheological properties using an ensemble approach combining Decision Trees, Linear Regression, and K-Nearest Neighbors (KNN). The analysis focuses on predicting and understanding various viscosity parameters and their relationships with temperature and shear conditions.
 
-## Research Context
-The Eastern Dahomey Basin in Southwest Nigeria contains significant heavy crude oil deposits that present extraction challenges due to high viscosity. This study investigates:
-- Flow properties under various conditions
-- Rheological parameters with biosolvent dilution
-- Temperature-dependent viscosity behavior
-- Shear stress/rate relationships
+## Features
+- Ensemble model combining:
+  - Decision Tree Regression
+  - Linear Regression
+  - K-Nearest Neighbors (KNN)
+- SHAP (SHapley Additive exPlanations) analysis for model interpretation
+- Cross-validation for model performance evaluation
+- Feature importance analysis
 
-## Key Parameters Analyzed
-1. Viscosity Measurements:
-   - Plastic viscosity
-   - Apparent viscosity
-   - Dynamic viscosity
-   - Kinematic viscosity
+## Data Parameters
+The analysis includes the following key parameters:
+1. Independent Variables:
+   - Density
+   - Temperature
+   - Shear Stress
+   - Shear Rate
 
-2. Rheological Properties:
-   - Yield point
-   - Shear stress/rate relationships
-   - Viscoelastic modulus:
-     - Elastic modulus
-     - Viscous modulus
+2. Target Variables:
+   - Apparent Viscosity
+   - Plastic Viscosity
+   - Yield Point
 
-## Methodology
-### Laboratory Analysis
-- Haake RS Rheometer 6000 measurements
-- High-temperature conditioning (up to 900°F) using electric muffle furnace
-- Rheological parameter measurements under various conditions
+## Model Components
+1. Data Preparation:
+   - Feature scaling using StandardScaler
+   - Train-test splitting
+   - Data combination from multiple experimental sources
 
-### Machine Learning Approach
-The study employs an ensemble learning method combining:
-- Decision Tree Regression
-- Linear Regression
-- K-Nearest Neighbors (KNN)
+2. Model Pipeline:
+   - Ensemble voting regressor
+   - Cross-validation scoring
+   - Feature importance ranking
 
-### Feature Engineering
-- Temperature-density interactions
-- Shear stress-rate relationships
-- Viscosity parameter correlations
+3. Analysis Tools:
+   - SHAP value calculations
+   - Performance metrics (RMSE, R², MAE)
+   - Feature interaction analysis
 
-## Directory Structure
-```
-├── data/              # Data files
-├── models/            # Trained model files
-├── notebooks/         # Jupyter notebooks
-├── src/              # Source code
-└── results/          # Analysis results and figures
-```
-
-## Installation
-```bash
-# Clone the repository
-git clone https://github.com/ol-s-cloud/heavy-oil-rheology-ml.git
-
-# Install requirements
-pip install -r requirements.txt
+## Requirements
+```python
+pandas
+numpy
+scikit-learn
+shap
+matplotlib
+seaborn
 ```
 
-## Future Work
-1. Advanced Modeling Approaches:
-   - Implementation of Gradient Boosting Regressors
-   - Deep Learning models for complex rheological behavior
-   - Time series analysis for temperature-dependent properties
+## Usage
+```python
+# Example usage of the model
+from model import create_ensemble_model, evaluate_model
 
-2. Enhanced Analysis:
-   - Error distribution analysis
-   - Uncertainty quantification
-   - Cross-validation with different biosolvent combinations
-   - Non-linear feature interactions
+# Prepare your data
+X = your_feature_data
+y = your_target_variable
 
-3. Additional Features:
-   - Integration with fluid dynamics simulations
-   - Real-time prediction capabilities
-   - Web-based visualization interface
+# Create and evaluate model
+model = create_ensemble_model()
+results = evaluate_model(X_train, X_test, y_train, y_test, feature_names, target_name)
+```
+
+## Model Performance
+The ensemble model provides:
+- Comprehensive viscosity predictions
+- Feature importance rankings
+- Cross-validated performance metrics
+- SHAP-based interpretability
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License
+
+## Future Improvements
+1. Model Enhancements:
+   - Gradient Boosting implementation
+   - Deep learning integration
+   - Advanced error analysis
+
+2. Feature Engineering:
+   - Additional interaction terms
+   - Temperature-dependent features
+   - Non-linear transformations
+
+3. Analysis Extensions:
+   - Uncertainty quantification
+   - Real-time prediction capabilities
+   - Extended cross-validation studies
+
+## Contact
+For questions or feedback, please open an issue in the repository.
