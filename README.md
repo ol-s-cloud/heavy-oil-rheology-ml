@@ -1,4 +1,4 @@
-# Heavy Oil Rheological Properties Analysis using Ensemble Machine Learning
+# Heavy Oil Rheological Properties Analysis using Ensemble Machine Learning -- DRAFT
 
 ## Overview
 This repository contains a machine learning analysis of heavy crude oil rheological properties using an ensemble approach combining Decision Trees, Linear Regression, and K-Nearest Neighbors (KNN). The analysis focuses on predicting and understanding various viscosity parameters and their relationships with temperature and shear conditions.
