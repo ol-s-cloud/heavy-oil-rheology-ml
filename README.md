@@ -1,95 +1,21 @@
-# Heavy Oil Rheological Properties Analysis using Ensemble Machine Learning -- DRAFT
+# Bitumen Rheology Modeling and Machine Learning Pipeline
 
-## Overview
-This repository contains a machine learning analysis of heavy crude oil rheological properties using an ensemble approach combining Decision Trees, Linear Regression, and K-Nearest Neighbors (KNN). The analysis focuses on predicting and understanding various viscosity parameters and their relationships with temperature and shear conditions.
+This project aims to model the rheological properties of natural bitumen using machine learning techniques. The focus is on predicting viscosity characteristics such as apparent viscosity, plastic viscosity, and yield point based on various input parameters, including shear stress, shear rate, temperature, and density. The machine learning pipeline includes data preprocessing, feature engineering, and regression analysis using a Gradient Boosting Regressor (GBR).
 
 ## Features
-- Ensemble model combining:
-  - Decision Tree Regression
-  - Linear Regression
-  - K-Nearest Neighbors (KNN)
-- SHAP (SHapley Additive exPlanations) analysis for model interpretation
-- Cross-validation for model performance evaluation
-- Feature importance analysis
 
-## Data Parameters
-The analysis includes the following key parameters:
-1. Independent Variables:
-   - Density
-   - Temperature
-   - Shear Stress
-   - Shear Rate
+- **Data Preparation**: Combines multiple data tables for modeling and feature engineering.
+- **Machine Learning Pipeline**: Uses a Gradient Boosting Regressor (GBR) model to predict key rheological properties of natural bitumen.
+- **Polynomial Feature Expansion**: Applies polynomial feature transformation for better modeling of non-linear relationships.
+- **SHAP (SHapley Additive exPlanations)**: Visualizes feature importance and provides model interpretability.
+- **Evaluation Metrics**: Computes evaluation metrics such as RMSE, R², and MAE for model assessment.
+- **Visualization**: Includes plots for actual vs predicted values, as well as SHAP summary plots for feature importance.
 
-2. Target Variables:
-   - Apparent Viscosity
-   - Plastic Viscosity
-   - Yield Point
+## Project Setup
 
-## Model Components
-1. Data Preparation:
-   - Feature scaling using StandardScaler
-   - Train-test splitting
-   - Data combination from multiple experimental sources
+### Prerequisites
 
-2. Model Pipeline:
-   - Ensemble voting regressor
-   - Cross-validation scoring
-   - Feature importance ranking
+Make sure you have Python 3.x and the necessary libraries installed. You can install the required packages by running:
 
-3. Analysis Tools:
-   - SHAP value calculations
-   - Performance metrics (RMSE, R², MAE)
-   - Feature interaction analysis
-
-## Requirements
-```python
-pandas
-numpy
-scikit-learn
-shap
-matplotlib
-seaborn
-```
-
-## Usage
-```python
-# Example usage of the model
-from model import create_ensemble_model, evaluate_model
-
-# Prepare your data
-X = your_feature_data
-y = your_target_variable
-
-# Create and evaluate model
-model = create_ensemble_model()
-results = evaluate_model(X_train, X_test, y_train, y_test, feature_names, target_name)
-```
-
-## Model Performance
-The ensemble model provides:
-- Comprehensive viscosity predictions
-- Feature importance rankings
-- Cross-validated performance metrics
-- SHAP-based interpretability
-
-## License
-MIT License
-
-## Future Improvements
-1. Model Enhancements:
-   - Gradient Boosting implementation
-   - Deep learning integration
-   - Advanced error analysis
-
-2. Feature Engineering:
-   - Additional interaction terms
-   - Temperature-dependent features
-   - Non-linear transformations
-
-3. Analysis Extensions:
-   - Uncertainty quantification
-   - Real-time prediction capabilities
-   - Extended cross-validation studies
-
-## Contact
-For questions or feedback, please open an issue in the repository.
+```bash
+pip install pandas numpy scikit-learn matplotlib shap
