@@ -1,0 +1,90 @@
+import React from 'react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+
+const RheologyMetrics = () => {
+  const data = [
+    {
+      parameter: 'Apparent Viscosity',
+      rmse: 2.1546,
+      r2: 0.8428,
+      mae: 1.6650,
+      unit: 'Pa·s'
+    },
+    {
+      parameter: 'Plastic Viscosity',
+      rmse: 1.6773,
+      r2: 0.1667,
+      mae: 0.7502,
+      unit: 'Pa·s'
+    },
+    {
+      parameter: 'Yield Point',
+      rmse: 30.5390,
+      r2: 0.9627,
+      mae: 27.7179,
+      unit: 'Pa'
+    }
+  ];
+
+  const metricData = [
+    { name: 'RMSE', 'Apparent Viscosity': 2.1546, 'Plastic Viscosity': 1.6773, 'Yield Point': 30.5390 },
+    { name: 'R²', 'Apparent Viscosity': 0.8428, 'Plastic Viscosity': 0.1667, 'Yield Point': 0.9627 },
+    { name: 'MAE', 'Apparent Viscosity': 1.6650, 'Plastic Viscosity': 0.7502, 'Yield Point': 27.7179 }
+  ];
+
+  return (
+    <Card className="w-full max-w-4xl">
+      <CardHeader>
+        <CardTitle>Rheological Parameters Analysis</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="mb-8">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="p-2 border text-left">Parameter</th>
+                <th className="p-2 border text-left">RMSE</th>
+                <th className="p-2 border text-left">R² Score</th>
+                <th className="p-2 border text-left">MAE</th>
+                <th className="p-2 border text-left">Unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((row, index) => (
+                <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : ''}>
+                  <td className="p-2 border font-medium">{row.parameter}</td>
+                  <td className="p-2 border">{row.rmse.toFixed(4)}</td>
+                  <td className="p-2 border">{row.r2.toFixed(4)}</td>
+                  <td className="p-2 border">{row.mae.toFixed(4)}</td>
+                  <td className="p-2 border">{row.unit}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        
+        <div className="mt-8">
+          <h3 className="text-lg font-semibold mb-4">Metrics Comparison</h3>
+          <BarChart
+            width={600}
+            height={400}
+            data={metricData}
+            margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="Apparent Viscosity" fill="#8884d8" />
+            <Bar dataKey="Plastic Viscosity" fill="#82ca9d" />
+            <Bar dataKey="Yield Point" fill="#ffc658" />
+          </BarChart>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
+export default RheologyMetrics;
