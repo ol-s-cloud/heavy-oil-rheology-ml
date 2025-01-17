@@ -53,6 +53,20 @@ flowchart TD
             Merge --> Features["Feature Engineering\n----------\nShear_Stress_Rate_Ratio\nTemperature_Density_Product"]
         end
     end
+
+    subgraph MLPipe ["Machine Learning Pipeline Layer"]
+        direction TB
+        Split["Train Test Split\n[train_test_split()]\n(test_size=0.2)"] --> Pipeline
+
+        subgraph Pipeline ["Pipeline Stages [create_model_pipeline()]"]
+            direction TB
+            S1["Stage 1: StandardScaler()\nFeature Normalization"] --> 
+            S2["Stage 2: PolynomialFeatures()\ndegree=2"] -->
+            S3["Stage 3: GradientBoostingRegressor()\nn_estimators=100\nlearning_rate=0.1\nmax_depth=3"]
+        end
+    end
+
+    DataPrep --> MLPipe
             </div>
         </div>
     </div>
