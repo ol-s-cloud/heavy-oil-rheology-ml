@@ -35,6 +35,24 @@
         <h1>Three-Stage ML Pipeline Architecture</h1>
         <div class="diagram-container">
             <div class="mermaid">
+flowchart TD
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px
+    classDef process fill:#ffffff,stroke:#000,stroke-width:3px
+    classDef dataBlock fill:#ffffff,stroke:#000,stroke-dasharray: 5 5
+    classDef pipelineBlock fill:#ffffff,stroke:#000,stroke-width:4px
+
+    subgraph DataPrep ["Data Preparation Layer"]
+        direction TB
+        RawData[("Raw Data Sources\n[prepare_data()]")] -->|"pd.DataFrame"| Preprocessing
+
+        subgraph Preprocessing ["Data Preprocessing"]
+            direction LR
+            T1["Table 4.1\n(Viscosity)"] --> |"concat()"| Merge
+            T2["Table 4.2.1\n(Rheology)"] --> |"concat()"| Merge
+            T3["Table 4.2.2\n(977°F Data)"] --> |"concat()"| Merge
+            Merge --> Features["Feature Engineering\n----------\nShear_Stress_Rate_Ratio\nTemperature_Density_Product"]
+        end
+    end
             </div>
         </div>
     </div>
