@@ -81,6 +81,11 @@ flowchart TD
         end
     end
 
+    subgraph Targets ["Target Variables"]
+        direction LR
+        TV1["Apparent\nViscosity"] --- TV2["Plastic\nViscosity"] --- TV3["Yield\nPoint"]
+    end
+
     DataPrep --> MLPipe
     MLPipe --> Eval
             </div>
