@@ -66,7 +66,23 @@ flowchart TD
         end
     end
 
+    subgraph Eval ["Evaluation & Analysis Layer"]
+        direction TB
+        subgraph Metrics ["Performance Metrics"]
+            M1["RMSE"] 
+            M2["R² Score"]
+            M3["MAE"]
+        end
+
+        subgraph Analysis ["Advanced Analysis"]
+            direction LR
+            V1["Actual vs Predicted\nVisualization"] -->|"matplotlib"| Results
+            V2["SHAP Feature\nImportance"] -->|"shap.TreeExplainer"| Results
+        end
+    end
+
     DataPrep --> MLPipe
+    MLPipe --> Eval
             </div>
         </div>
     </div>
