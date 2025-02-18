@@ -4,9 +4,16 @@
 
 Innovative machine learning approach to analyze flow properties of heavy crude oil under thermal conditions, focusing on the Agbabu bitumen deposit in Ondo State, Nigeria.
 
-## 📊 Project Visualization
+## 📊 Project Visualizations
 
+### Shear Stress vs Shear Rate
 ![Shear Stress vs Shear Rate Graph](research_paper/shear_stress_graph.png)
+
+### Actual vs Predicted Values
+![Actual vs Predicted Plot](research_paper/actual_vs_predicted_plot.png)
+
+### SHAP Value Analysis
+![SHAP Value Analysis](research_paper/shap_value_analysis.png)
 
 ## 🧠 Key Insights
 
@@ -31,6 +38,34 @@ Innovative machine learning approach to analyze flow properties of heavy crude o
 1. Thermal treatment at 977°F significantly reduced bitumen viscosity
 2. Identified critical temperature ranges affecting oil flow properties
 3. Demonstrated advanced machine learning approach for non-Newtonian fluid analysis
+
+## 🚀 Development Roadmap
+
+### Phase 1: Open Source Model Development
+- [ ] Develop portable machine learning model
+- [ ] Create data preprocessing scripts
+- [ ] Implement SHAP analysis toolkit
+- [ ] Develop basic CLI interface
+
+### Phase 2: Web Interface Development
+- [ ] Design responsive web application
+- [ ] Implement secure data upload mechanism
+- [ ] Create interactive prediction interface
+- [ ] Develop real-time SHAP value visualization
+- [ ] Implement user authentication
+
+### Phase 3: Advanced Features
+- [ ] Integration with IoT devices
+- [ ] Expand model to handle multiple crude oil types
+- [ ] Develop custom data augmentation techniques
+- [ ] Create comprehensive documentation
+- [ ] Establish community contribution guidelines
+
+### Phase 4: Commercialization Preparation
+- [ ] Develop commercial licensing strategy
+- [ ] Create enterprise-level support framework
+- [ ] Design scalable cloud deployment options
+- [ ] Prepare technical documentation for commercial use
 
 ## 🔮 Future Research Directions
 
@@ -70,7 +105,8 @@ We welcome collaboration from researchers, students, and professionals across AL
 
 ## 📄 License
 
-Creative Commons Attribution-NonCommercial 4.0 International License
+Custom License with Open Source and Commercial Use Provisions
+See `LICENSE` file for complete details
 
 ## 🎓 Citation
 
