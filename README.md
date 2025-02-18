@@ -1,75 +1,77 @@
 # Heavy Oil Rheology Machine Learning
 
-## Overview
+## 🔬 Research Overview
 
-This repository contains research on applying machine learning techniques to analyze the flow properties of heavy crude oil under thermal conditions. The project focuses on developing a sophisticated three-stage machine learning pipeline to understand and predict rheological behaviors of bitumen.
+Innovative machine learning approach to analyze flow properties of heavy crude oil under thermal conditions, focusing on the Agbabu bitumen deposit in Ondo State, Nigeria.
 
-## Research Highlights
+## 📊 Project Visualization
 
-- **Technique**: Three-stage SKLearn pipeline with Gradient Boosting and SHAP analysis
-- **Focus**: Thermal-induced changes in bitumen flow properties
-- **Location**: Agbabu bitumen deposit, Ondo State, Nigeria
+![Shear Stress vs Shear Rate Graph](research_paper/shear_stress_graph.png)
 
-## Key Findings
+## 🧠 Key Insights
 
-- Significant viscosity reduction under thermal treatment
-- Advanced machine learning approach for non-Newtonian fluid analysis
-- Insights into temperature-dependent rheological behaviors
+- **Methodology**: Three-stage SKLearn pipeline with Gradient Boosting and SHAP analysis
+- **Core Focus**: Thermal-induced changes in bitumen rheological properties
+- **Key Outcome**: Significant viscosity reduction under thermal treatment
 
-## Paper Details
+## 📈 Research Results
 
-- **Title**: Three-Stage Machine Learning Pipeline Ensemble with Gradient Boosting and SHAP Analysis - Evaluating Flow Properties of Heavy Crude Under Thermal Conditions
-- **Authors**: 
-  - Falade, A.A
-  - Olanrewaju Sa'id
-  - Akinsete, O.O
-- **Published In**: Global Journal of Engineering and Technology (GJET)
-- **ISSN**: 2583-3359 (Online)
+### Performance Metrics
+- **Yield Point Prediction**:
+  - R² Score: 0.9627
+  - RMSE: 30.5390 Pa
+  - MAE: 27.7179 Pa
+
+- **Apparent Viscosity Prediction**:
+  - R² Score: 0.8428
+  - RMSE: 2.1546 Pa·s
+  - MAE: 1.6650 Pa·s
+
+### Key Findings
+1. Thermal treatment at 977°F significantly reduced bitumen viscosity
+2. Identified critical temperature ranges affecting oil flow properties
+3. Demonstrated advanced machine learning approach for non-Newtonian fluid analysis
+
+## 🔮 Future Research Directions
+
+Recommended areas for further investigation:
+- Implement Bayesian inference for parameter uncertainty
+- Explore physics-informed neural networks (PINNs)
+- Develop advanced feature engineering techniques
+- Implement online learning algorithms
+- Integrate wavelet transformations for time-series analysis
+
+## 📝 Publication Details
+
+- **Title**: Three-Stage Machine Learning Pipeline Ensemble with Gradient Boosting and SHAP Analysis
+- **Authors**: Falade, A.A., Sa'id, O., Akinsete, O.O
+- **Journal**: Global Journal of Engineering and Technology (GJET)
 - **Volume**: 4, Issue 1
 - **Date**: January 2025
 
-## Repository Contents
+## 🤝 Collaboration Opportunities
+
+**Interested in Research?**
+
+We welcome collaboration from researchers, students, and professionals across ALL disciplines. Whether you're from biology, industrial engineering, data science, or any other field - if you're passionate about research and want to explore cutting-edge machine learning applications, we want to hear from you!
+
+### How to Engage
+
+- Curious about our ongoing projects?
+- Have innovative ideas?
+- Want to explore potential research synergies?
+
+**Reach Out**: Create an issue in this repository to start a conversation!
+
+## 📦 Repository Contents
 
 - `research_paper/`: Detailed research publication
-- (Forthcoming) `src/`: Code and data analysis scripts
+- `src/`: Code and data analysis scripts (forthcoming)
 
-## Collaboration Opportunities
-
-### Current Research Interests
-
-We are actively seeking collaborators for ongoing research projects in:
-- Machine learning applications in petroleum engineering
-- Advanced rheological modeling
-- Non-Newtonian fluid dynamics
-- Thermal recovery techniques for heavy oils
-
-### Interested in Contributing?
-
-If you have expertise in:
-- Machine learning
-- Petroleum engineering
-- Data science
-- Rheology
-- Thermal recovery techniques
-
-We'd love to hear from you!
-
-### Contact for Collaboration
-
-**Email**: gs_wl889@icloud.com
-
-Please include:
-- Your background
-- Areas of expertise
-- Specific interest in the project
-- Potential contributions
-
-## License
+## 📄 License
 
 Creative Commons Attribution-NonCommercial 4.0 International License
 
-## Citation
+## 🎓 Citation
 
-If you use this research in your work, please cite the original publication:
-
-Falade, A.A., Sa'id, O., & Akinsete, O.O. (2025). Three-Stage Machine Learning Pipeline Ensemble with Gradient Boosting and SHAP Analysis - Evaluating Flow Properties of Heavy Crude Under Thermal Conditions. Global Journal of Engineering and Technology, 4(1), 16-25.
+Falade, A.A., et al. (2025). Three-Stage Machine Learning Pipeline Ensemble with Gradient Boosting and SHAP Analysis. Global Journal of Engineering and Technology, 4(1), 16-25.
