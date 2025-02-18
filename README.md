@@ -4,19 +4,36 @@
 
 This research presents an innovative machine learning approach to analyze flow properties of heavy crude oil under thermal conditions, focusing on the Agbabu bitumen deposit in Ondo State, Nigeria.
 
-## 🚀 Features
+## Machine Learning Pipeline Architecture
 
-- Advanced data preprocessing for rheological data
-- Machine learning pipeline with Gradient Boosting Regressor
-- Predictive modeling for:
-  - Apparent Viscosity
-  - Plastic Viscosity
-  - Yield Point
-- SHAP (SHapley Additive exPlanations) feature importance analysis
-- Performance metrics visualization
-- Flexible and extensible machine learning workflow
+![ML Pipeline Architecture](research_paper/ml_pipeline_architecture.png)
 
-## 📦 Installation
+## Performance Metrics Visualization
+
+![Rheology Metrics Visualization](research_paper/rheology_metrics_visualization.png)
+
+## Experimental Device
+
+### Haake RS 6000 Rheometer
+
+![Haake RS 6000 Rheometer](research_paper/haake_rs6000_rheometer.jpg)
+
+The study utilized the Haake RS 6000 Rheometer, a sophisticated instrument for precise rheological measurements.
+
+- **Manufacturer**: Thermo Scientific
+- **Model**: Haake RS 6000
+- **Key Features**: 
+  - Four-bladed vane-type rotor (FL40)
+  - Diameter: 40 mm
+  - Gap width: 1.5 mm
+  - Coaxial cylinder sensor system (Z38 DIN)
+  - Sample capacity: 30.8 cm³
+  - Liquid temperature-controlled system
+
+#### Device Specifications
+- **Brochure**: [Haake RS 6000 Rheometer Brochure](https://tools.thermofisher.com/content/sfs/brochures/D11480~.pdf)
+
+## Installation
 
 ### Prerequisites
 - Python 3.8+
@@ -34,7 +51,7 @@ pip install -r requirements.txt
 pip install git+https://github.com/ol-s-cloud/heavy-oil-rheology-ml.git
 ```
 
-## 🔍 Usage
+## Usage
 
 ### Basic Analysis
 ```python
@@ -67,6 +84,38 @@ for target, result in results.items():
     )
 ```
 
+## Research Methodology
+
+The study employs a three-stage SKLearn pipeline with Gradient Boosting and SHAP analysis to investigate thermal-induced changes in bitumen rheological properties.
+
+### Pipeline Stages
+1. **Data Preparation**: 
+   - Preprocessing of viscosity and rheology data
+   - Feature engineering
+   - Creating derived features
+
+2. **Machine Learning Pipeline**:
+   - StandardScaler for feature normalization
+   - Polynomial feature generation
+   - Gradient Boosting Regression
+
+3. **Evaluation and Analysis**:
+   - Performance metrics (RMSE, R², MAE)
+   - Actual vs Predicted visualization
+   - SHAP feature importance analysis
+
+## Performance Metrics
+
+### Yield Point Prediction
+- R² Score: 0.9627
+- RMSE: 30.5390 Pa
+- MAE: 27.7179 Pa
+
+### Apparent Viscosity Prediction
+- R² Score: 0.8428
+- RMSE: 2.1546 Pa·s
+- MAE: 1.6650 Pa·s
+
 ## Development Roadmap v0.1.0 (Current)
 
 ### Completed
@@ -84,69 +133,80 @@ for target, result in results.items():
 
 ## Contributions
 
-We welcome contributions from researchers, students, and professionals interested in machine learning, petroleum engineering, and data science. Here are five key ways to contribute:
+We welcome contributions from researchers, students, and professionals across various disciplines. Here are seven key ways to contribute:
 
-1. **Research Collaboration**
-   - Propose improvements to the machine learning pipeline
-   - Share additional rheological datasets
-   - Develop new feature engineering techniques
+1. **Research and Scientific Advancement**
+   - Propose novel machine learning approaches
+   - Develop advanced feature engineering techniques
+   - Validate and extend current methodological frameworks
+   - Contribute domain-specific insights from petroleum engineering
 
-2. **Code Development**
+2. **Code and Software Development**
    - Improve existing machine learning models
-   - Enhance data preprocessing scripts
-   - Develop new visualization tools
-   - Implement additional performance metrics
+   - Enhance data preprocessing and cleaning scripts
+   - Develop new visualization and analysis tools
+   - Optimize computational performance
+   - Implement additional machine learning algorithms
 
-3. **Testing and Validation**
-   - Run experiments with different crude oil samples
+3. **Data Collection and Curation**
+   - Share rheological datasets from different sources
+   - Help standardize data collection methodologies
+   - Develop data augmentation strategies
+   - Create comprehensive metadata documentation
+   - Validate and clean existing datasets
+
+4. **Testing and Validation**
+   - Develop comprehensive unit and integration tests
+   - Create test suites for different scenarios
    - Validate model performance across various conditions
-   - Develop comprehensive unit tests
-   - Create integration test suites
+   - Identify and document edge cases
+   - Improve error handling and logging mechanisms
 
-4. **Documentation**
-   - Improve code documentation
-   - Create tutorials and usage examples
-   - Write detailed API documentation
-   - Develop comprehensive README and user guides
+5. **Documentation and Knowledge Sharing**
+   - Improve code and API documentation
+   - Create detailed tutorials and usage guides
+   - Develop comprehensive README and user manuals
+   - Write technical blog posts and articles
+   - Translate documentation into multiple languages
 
-5. **Community Engagement**
-   - Report issues and suggest improvements
+6. **Community and Outreach**
    - Participate in code reviews
-   - Help triage and reproduce reported bugs
-   - Contribute to discussion of project roadmap
+   - Help triage and reproduce reported issues
+   - Engage in project discussions and roadmap planning
+   - Organize workshops and webinars
+   - Mentor new contributors
+   - Promote the project in academic and professional networks
+
+7. **Interdisciplinary Collaboration**
+   - Bridge machine learning with petroleum engineering
+   - Explore applications in related fields
+   - Develop cross-domain research proposals
+   - Facilitate knowledge exchange between disciplines
+   - Identify potential research funding opportunities
 
 Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for our community standards.
 
-## Performance Metrics
+## Further Reading
 
-### Yield Point Prediction
-- R² Score: 0.9627
-- RMSE: 30.5390 Pa
-- MAE: 27.7179 Pa
+### Recommended Publications
+1. Martinez-Palou, R., et al. (2011). "Transportation of heavy and extra-heavy crude oil by pipeline: a review." Journal of Petroleum Science and Engineering, 75(3-4), 274-282.
 
-### Apparent Viscosity Prediction
-- R² Score: 0.8428
-- RMSE: 2.1546 Pa·s
-- MAE: 1.6650 Pa·s
+2. Henaut, I., et al. (2003). "Thermal flow properties of heavy oils." Offshore Technology Conference.
 
-## Experimental Device
+3. Saniere, A., et al. (2004). "Pipeline transportation of heavy oils, a strategic, economic and technological challenge." Oil Gas Science and Technology, 59(6), 455-466.
 
-### Haake RS 6000 Rheometer
+### Related Research Areas
+- Non-Newtonian fluid dynamics
+- Machine learning in petroleum engineering
+- Thermal recovery techniques for heavy oils
+- Advanced rheological modeling
 
-The study utilized the Haake RS 6000 Rheometer, a sophisticated instrument for precise rheological measurements.
-
-- **Manufacturer**: Thermo Scientific
-- **Model**: Haake RS 6000
-- **Key Features**: 
-  - Four-bladed vane-type rotor (FL40)
-  - Diameter: 40 mm
-  - Gap width: 1.5 mm
-  - Coaxial cylinder sensor system (Z38 DIN)
-  - Sample capacity: 30.8 cm³
-  - Liquid temperature-controlled system
-
-#### Device Specifications
-- **Brochure**: [Haake RS 6000 Rheometer Brochure](https://tools.thermofisher.com/content/sfs/brochures/D11480~.pdf)
+## Future Research Directions
+- Implement Bayesian inference for parameter uncertainty
+- Explore physics-informed neural networks (PINNs)
+- Develop advanced feature engineering techniques
+- Implement online learning algorithms
+- Integrate wavelet transformations for time-series analysis
 
 ## Publication Details
 - **Title**: Three-Stage Machine Learning Pipeline Ensemble with Gradient Boosting and SHAP Analysis
