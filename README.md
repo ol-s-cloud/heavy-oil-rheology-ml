@@ -54,14 +54,12 @@ results = run_analysis()
 
 # Visualize results for each target variable
 for target, result in results.items():
-    # Plot actual vs predicted values
     plot_actual_vs_predicted(
         y_test=result['y_test'], 
         y_pred=result['y_pred'], 
         target_name=target
     )
     
-    # Plot SHAP feature importance
     plot_shap_values(
         shap_values=result['shap_values'], 
         feature_names=result['poly_feature_names'], 
@@ -69,13 +67,55 @@ for target, result in results.items():
     )
 ```
 
-## Machine Learning Pipeline Architecture
+## Development Roadmap v0.1.0 (Current)
 
-![ML Pipeline Architecture](research_paper/ml_pipeline_architecture.png)
+### Completed
+- [x] Research and initial machine learning pipeline development
+- [x] Experimental data collection and preprocessing
+- [x] Machine learning model training and evaluation
+- [x] Performance metrics and SHAP analysis
 
-## Performance Metrics Visualization
+### Planned Features
+- [ ] Develop portable machine learning model
+- [ ] Create data preprocessing scripts
+- [ ] Implement SHAP analysis toolkit
+- [ ] Develop basic CLI interface
+- [ ] Design responsive web application
 
-![Rheology Metrics Visualization](research_paper/rheology_metrics_visualization.png)
+## Contributions
+
+We welcome contributions from researchers, students, and professionals interested in machine learning, petroleum engineering, and data science. Here are five key ways to contribute:
+
+1. **Research Collaboration**
+   - Propose improvements to the machine learning pipeline
+   - Share additional rheological datasets
+   - Develop new feature engineering techniques
+
+2. **Code Development**
+   - Improve existing machine learning models
+   - Enhance data preprocessing scripts
+   - Develop new visualization tools
+   - Implement additional performance metrics
+
+3. **Testing and Validation**
+   - Run experiments with different crude oil samples
+   - Validate model performance across various conditions
+   - Develop comprehensive unit tests
+   - Create integration test suites
+
+4. **Documentation**
+   - Improve code documentation
+   - Create tutorials and usage examples
+   - Write detailed API documentation
+   - Develop comprehensive README and user guides
+
+5. **Community Engagement**
+   - Report issues and suggest improvements
+   - Participate in code reviews
+   - Help triage and reproduce reported bugs
+   - Contribute to discussion of project roadmap
+
+Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for our community standards.
 
 ## Performance Metrics
 
@@ -93,6 +133,30 @@ for target, result in results.items():
 
 ### Haake RS 6000 Rheometer
 
-![Haake RS 6000 Rheometer](research_paper/haake_rs6000_rheometer.jpg)
+The study utilized the Haake RS 6000 Rheometer, a sophisticated instrument for precise rheological measurements.
 
-[Rest of the previous README content remains the same]
+- **Manufacturer**: Thermo Scientific
+- **Model**: Haake RS 6000
+- **Key Features**: 
+  - Four-bladed vane-type rotor (FL40)
+  - Diameter: 40 mm
+  - Gap width: 1.5 mm
+  - Coaxial cylinder sensor system (Z38 DIN)
+  - Sample capacity: 30.8 cm³
+  - Liquid temperature-controlled system
+
+#### Device Specifications
+- **Brochure**: [Haake RS 6000 Rheometer Brochure](https://tools.thermofisher.com/content/sfs/brochures/D11480~.pdf)
+
+## Publication Details
+- **Title**: Three-Stage Machine Learning Pipeline Ensemble with Gradient Boosting and SHAP Analysis
+- **Authors**: Falade, A.A., Sa'id, O., Akinsete, O.O
+- **Journal**: Global Journal of Engineering and Technology (GJET)
+- **Volume**: 4, Issue 1
+- **Date**: January 2025
+
+## License
+MIT License. See the LICENSE file for complete details.
+
+## Citation
+Falade, A.A., Sa'id, O., Akinsete, O.O. (2025). Three-Stage Machine Learning Pipeline Ensemble with Gradient Boosting and SHAP Analysis. Global Journal of Engineering and Technology, 4(1), 16-25.
