@@ -56,7 +56,7 @@ We'd love to hear from you!
 
 ### Contact for Collaboration
 
-**Email**: research.collaboration@ol-s-cloud.tech
+**Email**: gs_wl889@icloud.com
 
 Please include:
 - Your background
