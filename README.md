@@ -12,10 +12,6 @@ This research presents an innovative machine learning approach to analyze flow p
 
 ![Rheology Metrics Visualization](research_paper/rheology_metrics_visualization.png)
 
-### Performance Metrics Brain Network
-
-![Performance Metrics Brain Network](research_paper/metrics_brain_network.svg)
-
 ## Experimental Device
 
 ### Haake RS 6000 Rheometer
