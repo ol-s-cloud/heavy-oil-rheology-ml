@@ -8,6 +8,10 @@ This research presents an innovative machine learning approach to analyze flow p
 
 ![ML Pipeline Architecture](research_paper/ml_pipeline_architecture.png)
 
+## Performance Metrics Visualization
+
+![Rheology Metrics Visualization](research_paper/rheology_metrics_visualization.png)
+
 ## Experimental Device
 
 ### Haake RS 6000 Rheometer
@@ -29,6 +33,24 @@ The study utilized the Haake RS 6000 Rheometer, a sophisticated instrument for p
 #### Device Specifications
 - **Brochure**: [Haake RS 6000 Rheometer Brochure](https://tools.thermofisher.com/content/sfs/brochures/D11480~.pdf)
 
+## Performance Metrics
+
+### Yield Point Prediction
+- R² Score: 0.9627
+- RMSE: 30.5390 Pa
+- MAE: 27.7179 Pa
+
+### Apparent Viscosity Prediction
+- R² Score: 0.8428
+- RMSE: 2.1546 Pa·s
+- MAE: 1.6650 Pa·s
+
+## Key Findings
+
+1. Thermal treatment at 977°F significantly reduced bitumen viscosity
+2. Identified critical temperature ranges affecting oil flow properties
+3. Demonstrated advanced machine learning approach for non-Newtonian fluid analysis
+
 ## Research Methodology
 
 The study employs a three-stage SKLearn pipeline with Gradient Boosting and SHAP analysis to investigate thermal-induced changes in bitumen rheological properties.
@@ -48,24 +70,6 @@ The study employs a three-stage SKLearn pipeline with Gradient Boosting and SHAP
    - Performance metrics (RMSE, R², MAE)
    - Actual vs Predicted visualization
    - SHAP feature importance analysis
-
-## Performance Metrics
-
-### Yield Point Prediction
-- R² Score: 0.9627
-- RMSE: 30.5390 Pa
-- MAE: 27.7179 Pa
-
-### Apparent Viscosity Prediction
-- R² Score: 0.8428
-- RMSE: 2.1546 Pa·s
-- MAE: 1.6650 Pa·s
-
-## Key Findings
-
-1. Thermal treatment at 977°F significantly reduced bitumen viscosity
-2. Identified critical temperature ranges affecting oil flow properties
-3. Demonstrated advanced machine learning approach for non-Newtonian fluid analysis
 
 ## Further Reading
 
