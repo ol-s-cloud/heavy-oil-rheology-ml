@@ -51,6 +51,32 @@ The study utilized the Haake RS 6000 Rheometer, a sophisticated instrument for p
 2. Identified critical temperature ranges affecting oil flow properties
 3. Demonstrated advanced machine learning approach for non-Newtonian fluid analysis
 
+## Development Roadmap v0.1.0 (Current)
+
+### Completed
+- [x] Research and initial machine learning pipeline development
+- [x] Experimental data collection and preprocessing
+- [x] Machine learning model training and evaluation
+- [x] Performance metrics and SHAP analysis
+
+### Planned Features
+- [ ] Develop portable machine learning model
+- [ ] Create data preprocessing scripts
+- [ ] Implement SHAP analysis toolkit
+- [ ] Develop basic CLI interface
+- [ ] Design responsive web application
+- [ ] Implement secure data upload mechanism
+- [ ] Create interactive prediction interface
+- [ ] Develop real-time SHAP value visualization
+- [ ] Implement user authentication
+
+### Future Milestones
+- Integration with IoT devices
+- Expand model to handle multiple crude oil types
+- Develop custom data augmentation techniques
+- Create comprehensive documentation
+- Establish community contribution guidelines
+
 ## Research Methodology
 
 The study employs a three-stage SKLearn pipeline with Gradient Boosting and SHAP analysis to investigate thermal-induced changes in bitumen rheological properties.
@@ -85,34 +111,6 @@ The study employs a three-stage SKLearn pipeline with Gradient Boosting and SHAP
 - Machine learning in petroleum engineering
 - Thermal recovery techniques for heavy oils
 - Advanced rheological modeling
-
-## Development Roadmap
-
-### Phase 1: Open Source Model Development
-- Develop portable machine learning model
-- Create data preprocessing scripts
-- Implement SHAP analysis toolkit
-- Develop basic CLI interface
-
-### Phase 2: Web Interface Development
-- Design responsive web application
-- Implement secure data upload mechanism
-- Create interactive prediction interface
-- Develop real-time SHAP value visualization
-- Implement user authentication
-
-### Phase 3: Advanced Features
-- Integration with IoT devices
-- Expand model to handle multiple crude oil types
-- Develop custom data augmentation techniques
-- Create comprehensive documentation
-- Establish community contribution guidelines
-
-### Phase 4: Commercialization Preparation
-- Develop commercial licensing strategy
-- Create enterprise-level support framework
-- Design scalable cloud deployment options
-- Prepare technical documentation for commercial use
 
 ## Future Research Directions
 - Implement Bayesian inference for parameter uncertainty
