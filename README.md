@@ -8,11 +8,6 @@ This research presents an innovative machine learning approach to analyze flow p
 
 ![ML Pipeline Architecture](research_paper/ML-Pipeline-Architecture.png)
 
-## Shear Stress vs Shear Rate
-For both Natural Bitumen and Bitumen @ 977 F
-
-![Rheology Metrics Visualization](research_paper/heavy-oil.png)
-
 ## Experimental Device
 
 ### Haake RS 6000 Rheometer
@@ -106,6 +101,11 @@ The study employs a three-stage SKLearn pipeline with Gradient Boosting and SHAP
    - SHAP feature importance analysis
 
 ## Performance Metrics
+
+## Shear Stress vs Shear Rate
+For both Natural Bitumen and Bitumen @ 977 F
+
+![Rheology Metrics Visualization](research_paper/heavy-oil.png)
 
 ### Yield Point Prediction
 - R² Score: 0.9627
