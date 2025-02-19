@@ -6,7 +6,7 @@ This research presents an innovative machine learning approach to analyze flow p
 
 ## Machine Learning Pipeline Architecture
 
-![ML Pipeline Architecture](research_paper/ml_pipeline_architecture.png)
+![ML Pipeline Architecture](research_paper/ML-Pipeline-Architecture.png)
 
 ## Performance Metrics Visualization
 
