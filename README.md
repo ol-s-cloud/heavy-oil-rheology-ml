@@ -8,7 +8,8 @@ This research presents an innovative machine learning approach to analyze flow p
 
 ![ML Pipeline Architecture](research_paper/ML-Pipeline-Architecture.png)
 
-## Performance Metrics Visualization
+## Shear Stress vs Shear Rate
+For both Natural Bitumen and Bitumen @ 977 F
 
 ![Rheology Metrics Visualization](research_paper/heavy-oil.png)
 
