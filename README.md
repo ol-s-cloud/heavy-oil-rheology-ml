@@ -2,7 +2,7 @@
 
 ## Research Overview
 
-This research presents an innovative machine learning approach to analyze flow properties of heavy crude oil under thermal conditions, focusing on the Agbabu bitumen deposit in Ondo State, Nigeria.
+This research presents an innovative machine learning approach to analyze flow properties of heavy crude oil under thermal conditions, via implementing a Three-Stage Machine Learning Pipeline Ensemble with Gradient Boosting and SHAP Analysis.
 
 ## Machine Learning Pipeline Architecture
 
