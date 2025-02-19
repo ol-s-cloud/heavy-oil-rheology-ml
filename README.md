@@ -10,7 +10,7 @@ This research presents an innovative machine learning approach to analyze flow p
 
 ## Performance Metrics Visualization
 
-![Rheology Metrics Visualization](research_paper/rheology_metrics_visualization.png)
+![Rheology Metrics Visualization](research_paper/heavy-oil.png)
 
 ## Experimental Device
 
