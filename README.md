@@ -1,34 +1,33 @@
-# Aurelia: Advanced Scientific Machine Learning Framework
+# Heavy Oil Rheology Machine Learning Project
 
-## Project Overview
+## Overview
+Research project focused on applying machine learning techniques to heavy oil rheology analysis.
 
-Aurelia is a comprehensive machine learning framework designed for scientific research, with a focus on heavy oil rheology analysis.
+## Project Goals
+- Develop advanced ML models for rheological characterization
+- Improve understanding of heavy oil behavior
+- Create predictive tools for industrial applications
 
-### Key Features
-- Modular architecture
-- Multi-tier support
-- Advanced security
-- Comprehensive ML capabilities
+## Getting Started
+### Prerequisites
+- Python 3.8+
+- Required libraries listed in `requirements.txt`
 
-## Installation
-
+### Installation
 ```bash
-pip install aurelia
+git clone https://github.com/ol-s-cloud/heavy-oil-rheology-ml
+cd heavy-oil-rheology-ml
+pip install -r requirements.txt
 ```
 
-## Quick Start
+## Project Structure
+- `data/`: Raw and processed data
+- `models/`: Machine learning models
+- `notebooks/`: Jupyter notebooks for analysis
+- `scripts/`: Utility scripts
 
-```python
-from aurelia import Experiment
-
-# Create a new scientific experiment
-experiment = Experiment(domain='heavy_oil_rheology')
-```
-
-## Tiers
-- Community (Free)
-- Research (Paid)
-- Enterprise (Premium)
+## Contributing
+Please read `CONTRIBUTING.md` for details on our code of conduct and the process for submitting pull requests.
 
 ## License
-MIT License
+This project is licensed under the MIT License - see the `LICENSE` file for details.
