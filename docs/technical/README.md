@@ -1,24 +1,31 @@
 # Technical Documentation
 
-This directory contains technical documentation for the RheoML platform, providing detailed information about device compatibility, system architecture, and implementation details.
-
-## Contents
-
-| Document | Description |
-|----------|-------------|
-| [2025-04-18-device-compatibility.md](./2025-04-18-device-compatibility.md) | Comparison of rheometer devices and their compatibility with RheoML |
-| [2025-04-18-architecture.md](./2025-04-18-architecture.md) | System architecture and repository structure |
+This directory contains technical documentation for the Heavy Oil Rheology ML project (RheoML). These documents provide detailed specifications, compatibility guides, and technical implementation details to support both development and usage of the platform.
 
 ## Purpose
 
-The technical documentation serves to:
+Technical documentation serves to:
 
-1. Provide detailed technical specifications for developers and contributors
-2. Document architectural decisions and their rationales
-3. Outline compatibility with different rheometer devices and manufacturers
-4. Serve as a reference for implementation details
+1. Define technical specifications and requirements
+2. Provide detailed compatibility information
+3. Document implementation details
+4. Serve as a reference for developers and users
+5. Ensure consistent implementation of technical features
+
+## Document Categories
+
+- **Device Compatibility**: Information about supported rheometer devices and their compatibility
+- **Data Formats**: Specifications for data import/export formats
+- **API Reference**: Detailed API documentation (future)
+- **Implementation Guidelines**: Technical guidance for specific components (future)
+
+## Latest Documents
+
+| Date | Document | Description |
+|------|----------|-------------|
+| 2025-04-18 | [Device Compatibility Guide](./device-compatibility-guide.md) | Comparison of rheometer devices and compatibility specifications |
 
 ## Related Documentation
 
 - [Project Vision](../project-vision/): Strategic direction and goals
-- [Sprint Planning](../sprint-planning/): Implementation plans that reference this architecture
+- [Sprint Planning](../sprint-planning/): Implementation plans for technical features
