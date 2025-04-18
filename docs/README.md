@@ -10,6 +10,7 @@ This directory contains comprehensive documentation for the Heavy Oil Rheology M
 | [project-status/](./project-status/) | Historical timeline and current status reports |
 | [project-vision/](./project-vision/) | Strategic vision and roadmap documents |
 | [sprint-planning/](./sprint-planning/) | Detailed sprint breakdowns and implementation plans |
+| [technical/](./technical/) | Technical specifications and compatibility documentation |
 
 ## Latest Documents
 
@@ -17,6 +18,7 @@ This directory contains comprehensive documentation for the Heavy Oil Rheology M
 - **Project Status**: [2025-04-18 Project Status](./project-status/2025-04-18-project-status.md)
 - **Project Vision**: [2025-04-18 Project Vision](./project-vision/2025-04-18-project-vision.md)
 - **Sprint Planning**: [2025-04-18 Sprint Planning](./sprint-planning/2025-04-18-sprint-planning.md)
+- **Technical Docs**: [Device Compatibility Guide](./technical/device-compatibility-guide.md)
 
 ## About the Project
 
