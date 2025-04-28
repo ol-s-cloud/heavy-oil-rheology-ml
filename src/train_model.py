@@ -4,34 +4,48 @@ import pandas as pd
 import numpy as np
 import os
 import joblib
+import yaml
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
+# --- Load configuration ---
+CONFIG_PATH = "config/train_config.yaml"
+
+if not os.path.exists(CONFIG_PATH):
+    raise FileNotFoundError(f"Config file not found at {CONFIG_PATH}")
+
+with open(CONFIG_PATH, "r") as f:
+    config = yaml.safe_load(f)
+
 # --- Load dataset ---
-DATA_PATH = "data/dataset.csv"  # Adjust if your dataset path is different
+data_path = config["data_path"]
 
-if not os.path.exists(DATA_PATH):
-    raise FileNotFoundError(f"Dataset not found at {DATA_PATH}")
+if not os.path.exists(data_path):
+    raise FileNotFoundError(f"Dataset not found at {data_path}")
 
-df = pd.read_csv(DATA_PATH)
+df = pd.read_csv(data_path)
 
 # --- Prepare features and target ---
-TARGET_COLUMN = "viscosity"  # Adjust if your target variable has a different name
+TARGET_COLUMN = "viscosity"  # Adjust if needed
 
 X = df.drop(columns=[TARGET_COLUMN])
 y = df[TARGET_COLUMN]
 
 # --- Split into training and test sets ---
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, 
+    test_size=config["training_settings"]["test_size"], 
+    random_state=config["model_settings"]["random_state"]
+)
 
 # --- Define and train the model ---
 model = RandomForestRegressor(
-    n_estimators=100,
-    max_depth=None,
-    random_state=42,
-    n_jobs=-1
+    n_estimators=config["model_settings"]["n_estimators"],
+    max_depth=config["model_settings"]["max_depth"],
+    random_state=config["model_settings"]["random_state"],
+    n_jobs=config["model_settings"]["n_jobs"]
 )
 
 model.fit(X_train, y_train)
@@ -49,10 +63,10 @@ print(f" - MSE: {mse:.4f}")
 print(f" - R2 Score: {r2:.4f}")
 
 # --- Save the model ---
-OUTPUT_DIR = "models"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+output_dir = config["model_output_dir"]
+os.makedirs(output_dir, exist_ok=True)
 
-MODEL_PATH = os.path.join(OUTPUT_DIR, "random_forest_model.pkl")
-joblib.dump(model, MODEL_PATH)
+model_path = os.path.join(output_dir, config["model_filename"])
+joblib.dump(model, model_path)
 
-print(f"Trained model saved to {MODEL_PATH}")
+print(f"Trained model saved to {model_path}")
